@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Services - Dil's Technology</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideInFromBottom 0.6s ease-out forwards;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, #22c55e, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .platform-icon {
+            transition: all 0.3s ease;
+        }
+
+        .platform-icon:hover {
+            transform: scale(1.1);
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-bullhorn text-green-600 text-2xl"></i>
+                    <span class="font-bold text-xl">Dil's Technology</span>
+                </a>
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center slide-in">
+                <h1 class="text-6xl font-bold mb-6 gradient-text">Digital Marketing</h1>
+                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Transform your brand's digital presence with data-driven marketing strategies that deliver real results.
+                </p>
+            </div>
+
+            <!-- Services Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-20">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-facebook-f text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Social Media Marketing</h3>
+                    <p class="text-gray-600 text-center">Strategic content and campaigns across all major platforms</p>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-google text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Google Ads</h3>
+                    <p class="text-gray-600 text-center">Targeted PPC campaigns for maximum ROI</p>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Analytics & Reporting</h3>
+                    <p class="text-gray-600 text-center">Data-driven insights for continuous improvement</p>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="mt-32 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="stat-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">500+</div>
+                    <div class="text-gray-600">Successful Campaigns</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">50M+</div>
+                    <div class="text-gray-600">Ad Impressions</div>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">200%</div>
+                    <div class="text-gray-600">Average ROI</div>
+                </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="mt-32 text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12">Platforms We Excel In</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div class="platform-icon">
+                        <i class="fab fa-facebook text-5xl text-blue-600 mb-4"></i>
+                        <p class="font-medium">Facebook</p>
+                    </div>
+                    <div class="platform-icon">
+                        <i class="fab fa-instagram text-5xl text-pink-600 mb-4"></i>
+                        <p class="font-medium">Instagram</p>
+                    </div>
+                    <div class="platform-icon">
+                        <i class="fab fa-linkedin text-5xl text-blue-700 mb-4"></i>
+                        <p class="font-medium">LinkedIn</p>
+                    </div>
+                    <div class="platform-icon">
+                        <i class="fab fa-google text-5xl text-red-500 mb-4"></i>
+                        <p class="font-medium">Google</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="mt-32 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Process</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-search text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Research & Analysis</h3>
+                        </div>
+                        <p class="text-gray-600">Understanding your market, competitors, and target audience</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-bullseye text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Strategy Development</h3>
+                        </div>
+                        <p class="text-gray-600">Creating tailored marketing plans aligned with your goals</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-rocket text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Implementation</h3>
+                        </div>
+                        <p class="text-gray-600">Executing campaigns with precision and creativity</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-bar text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Optimization</h3>
+                        </div>
+                        <p class="text-gray-600">Continuous monitoring and improvement of campaign performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-32 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Digital Presence?</h2>
+                <p class="text-gray-600 mb-8">Let's create your success story together</p>
+                <button id="get-in-touch-button" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-600">© 2024 Dil's Technology Solutions</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-green-600 transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-600 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

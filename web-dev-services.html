@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services - Dil's Technology</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideInFromBottom 0.6s ease-out forwards;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    <span class="font-bold text-xl">Dil's Technology</span>
+                </a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center slide-in">
+                <h1 class="text-6xl font-bold mb-6 gradient-text">Web Development</h1>
+                <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Creating elegant, high-performance websites that drive results at competitive prices.
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-20">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-rocket text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Fast Development</h3>
+                    <p class="text-gray-600 text-center">Quick delivery without compromising on quality</p>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Responsive Design</h3>
+                    <p class="text-gray-600 text-center">Perfect experience across all devices</p>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-dollar-sign text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Competitive Pricing</h3>
+                    <p class="text-gray-600 text-center">Best value for your investment</p>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="mt-32 text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12">Technologies We Use</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-react text-5xl text-blue-500 mb-4"></i>
+                        <span class="font-medium">React</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-angular text-5xl text-red-500 mb-4"></i>
+                        <span class="font-medium">Angular</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-node-js text-5xl text-green-500 mb-4"></i>
+                        <span class="font-medium">Node.js</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-php text-5xl text-purple-500 mb-4"></i>
+                        <span class="font-medium">PHP</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-microsoft text-5xl text-purple-500 mb-4"></i>
+                        <span class="font-medium">.NET</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-32 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+                <p class="text-gray-600 mb-8">Let's create something amazing together</p>
+                <button id="get-in-touch-button"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Get in Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-600">© 2024 Dil's Technology Solutions</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dil's Technology Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(120deg, #1a202c 0%, #2d3748 100%);
+        }
+
+        .banner-overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio-card {
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .icon-circle {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Hero Section with Banner -->
+    <header class="relative h-screen flex items-center">
+        <img src="./images/banner.jpg" alt="Technology Banner" class="absolute inset-0 w-full h-full object-cover"/>
+        <div class="banner-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="fade-in-up text-white text-center">
+                <h1 class="text-6xl font-bold mb-4">Dil's Technology Solutions</h1>
+                <p class="text-2xl mb-8">Transforming Ideas into Digital Reality</p>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all" onclick="scrollToSection('services')">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" onclick="goToRoute('./web-dev-services.html')">
+                    <div class="icon-circle bg-blue-100">
+                        <i class="fas fa-laptop-code text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Web Development</h3>
+                    <p class="text-gray-600 text-center">Elegant and beautiful websites with maintenance at the most competitive rates.</p>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" onclick="goToRoute('./digital-marketing.html')">
+                    <div class="icon-circle bg-green-100">
+                        <i class="fas fa-bullhorn text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Digital Marketing</h3>
+                    <p class="text-gray-600 text-center">Comprehensive digital marketing solutions including Meta, Google, and more.</p>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" onclick="goToRoute('./design-service.html')">
+                    <div class="icon-circle bg-purple-100">
+                        <i class="fas fa-paint-brush text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Design Services</h3>
+                    <p class="text-gray-600 text-center">Professional designs for websites, ad campaigns, and marketing materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flagship Products -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Flagship Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="float-animation bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/sastamien-logo.png" alt="Sastamein Platform" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-shopping-cart text-2xl text-blue-600 mr-3"></i>
+                            <h3 class="text-2xl font-bold">Sastamein</h3>
+                        </div>
+                        <p class="mb-4">An ecommerce master website enabling direct imports from foreign factories, eliminating storage and middleman costs.</p>
+                        <a href="https://www.sastamein.com" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            Visit Sastamein <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="float-animation bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/masuverse_logo.png" alt="Masuverse AR Platform" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-vr-cardboard text-2xl text-purple-600 mr-3"></i>
+                            <h3 class="text-2xl font-bold">Masuverse</h3>
+                        </div>
+                        <p class="mb-4">Advanced AR solution featuring image tracking, face, body, and world tracking for immersive user experiences.</p>
+                        <a href="https://www.masuverse.com" class="inline-flex items-center text-purple-600 hover:text-purple-800">
+                            Visit Masuverse <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Portfolio -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/kadal.webp" alt="Kadal Villa" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Kadal Villa</h3>
+                        <p class="text-gray-600 mb-4">Luxury vacation rental platform</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Web App</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Booking</span>
+                        </div>
+                        <a href="https://www.kadalvilla.com" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/10tailor.png" alt="10Tailor" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">10Tailor</h3>
+                        <p class="text-gray-600 mb-4">Tailoring platform</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Tailoring</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">E-commerce</span>
+                        </div>
+                        <a href="https://www.10tailor.biz" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/fonehouse.webp" alt="Fonehouse" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fonehouse</h3>
+                        <p class="text-gray-600 mb-4">Mobile phone retail platform</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">E-commerce</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Mobile</span>
+                        </div>
+                        <a href="https://www.fonehouse.in" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./images/bechifashion.svg" alt="BechiFashion" class="mx-auto h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">BechiFashion</h3>
+                        <p class="text-gray-600 mb-4">Fashion e-commerce platform</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Fashion</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">E-commerce</span>
+                        </div>
+                        <a href="https://www.bechifashion.com" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Profile -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Meet Our Lead Developer</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-circle text-4xl text-blue-600"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-center">Diligent Oraterlee</h3>
+                <p class="mb-6 text-gray-600 text-center">A passionate IT professional with extensive experience in frontend and backend development. Specialized in Angular, React, and ASP.NET with a strong background in digital marketing and product management.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-3 flex items-center">
+                            <i class="fas fa-code mr-2 text-blue-600"></i>
+                            Key Skills
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Full Stack Development
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Digital Marketing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Product Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                AR/VR Development
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-3 flex items-center">
+                            <i class="fas fa-address-card mr-2 text-blue-600"></i>
+                            Contact
+                        </h4>
+                        <div class="space-y-2">
+                            <p class="flex items-center">
+                                <i class="fas fa-envelope text-gray-500 mr-2"></i>
+                                oraterlee@gmail.com
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone text-gray-500 mr-2"></i>
+                                +919746775884
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">About Us</h4>
+                    <p>Providing innovative IT solutions at competitive prices since 2020.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="flex items-center mb-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Nadayara, Varkala, Kerala, India
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            oraterlee@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 pt-8 text-center">
+                <p>© 2024 Dil's Technology Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function goToRoute(route) {
+        window.location.href = route;
+    }
+</script>
+</html>
